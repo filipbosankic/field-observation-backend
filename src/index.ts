@@ -62,7 +62,8 @@ app.post("/sync", (req, res) => {
   });
 });
 
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-  console.log("Backend läuft auf Port 3000");
+app.listen(PORT, () => {
+  console.log(`Backend läuft auf Port ${PORT}`);
 });
