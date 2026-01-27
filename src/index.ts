@@ -1,6 +1,7 @@
 // src/index.ts
 console.log("Backend gestartet");
 
+import cors from "cors";
 import express from "express";
 
 type DomainEvent = {
@@ -20,6 +21,8 @@ function isEntityDeleted(entityId: string): boolean {
 }
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
