@@ -27,7 +27,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/health", (_req, res) => {
-    res.json({ status: "kekw124", timestamp: Date.now() || 0 });
+    res.json({
+        status: "ok",
+        service: "field-observation-backend",
+        version: "1.0.0",
+        time: new Date().toISOString()
+    });
 });
 
 app.get("/events", (req, res) => {
