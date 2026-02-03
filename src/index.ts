@@ -6,7 +6,7 @@ import express from "express";
 
 type DomainEvent = {
     id: string;
-    type: 'OBS_CREATED' | 'OBS_UPDATED' | 'OBS_DELETED';
+    type: 'OBS_CREATED' | 'OBS_UPDATED' | 'OBS_DELETED' | 'CAT_CREATED';
     aggregateId: string;
     payload?: unknown;
     occurredAt: string;
